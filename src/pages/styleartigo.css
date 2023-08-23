@@ -1,0 +1,48 @@
+body{
+    background-color: hsl(196, 52%, 78%);  
+    color: mediumvioletred;
+    margin: 25px;
+    padding: 35px;
+    
+   
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+.mec {
+    width: 500px;
+    height: 500px;
+    text-align:right; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    border-radius: 25px;
+}
+
+.txt{
+    font-size: 35px;
+}
+
+.txt1{
+    font-size: 25px;
+    display: flex;
+    
+}
+.stl{
+    background-color: gainsboro;
+    border-radius: 25px;
+
+}
+.stl p{
+    
+   margin: 25px;
+}
+
+.p{
+    font-size: 35px;
+}

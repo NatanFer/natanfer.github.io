@@ -7,7 +7,7 @@ body{
     background-color:hsl(196, 52%, 78%); 
     text-align:center;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     color: mediumvioletred;
     padding: 50px;
     
@@ -47,3 +47,4 @@ button{
     color: mediumvioletred;
     background-color: beige;
 }
+
