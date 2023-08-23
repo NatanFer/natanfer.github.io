@@ -46,3 +46,17 @@ h2{
 .p{
     font-size: 35px;
 }
+button{
+    border-radius: 13px;
+    font-size: 15px;
+    width: 100px;
+    height: 60px;
+    padding: 13px; 
+    color: mediumvioletred;
+    background-color: beige;
+    margin-top: 50px;
+}
+
+.cent{
+    text-align: center;
+}
