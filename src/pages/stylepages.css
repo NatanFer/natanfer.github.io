@@ -46,5 +46,12 @@ button{
     padding: 13px; 
     color: mediumvioletred;
     background-color: beige;
+    transition: 0.5;
 }
 
+button:hover{
+    background-color: rgb(255, 173, 241);
+    height: 70px;
+    width: 110px;
+    
+    }

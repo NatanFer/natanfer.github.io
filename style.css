@@ -84,4 +84,12 @@ button{
     padding: 13px; 
     color: mediumvioletred;
     margin-top: 50px;
+    transition: 0.5s;
+}
+
+button:hover{
+background-color: rgb(255, 173, 241);
+height: 110px;
+width: 310px;
+
 }

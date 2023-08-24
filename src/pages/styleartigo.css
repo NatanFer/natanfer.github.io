@@ -55,8 +55,16 @@ button{
     color: mediumvioletred;
     background-color: beige;
     margin-top: 50px;
+    transition: 0.5s;
 }
 
 .cent{
     text-align: center;
 }
+
+button:hover{
+    background-color: rgb(255, 173, 241);
+    height: 70px;
+    width: 110;
+    
+    }
