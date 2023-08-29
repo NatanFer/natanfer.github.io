@@ -1,18 +1,21 @@
 header {
     background-color: black;
     color: white;
-    height: 50px;
+    
+    
     width: 100%;
     position: fixed;
     z-index: 1;
     display: block;
 }
 
+
 body {
     font-size: 15px;
     line-height: 1.5;
     font-family: "Lato", sans-serif;
 }
+
 
 #idLogo {
     padding-top: 25px;
@@ -21,16 +24,33 @@ body {
 
 }
 
+
 nav a {
     color: inherit;
     text-decoration: none;
     font-size: inherit;
 }
 
+
 nav a:hover {
     color: rgba(255, 255, 255, 0.812);
     text-decoration: solid;
 }
+
+
+.buton{
+    white-space: normal;
+    
+}
+
+
+.nav-intem{
+    padding: 8px 16px;
+    width: auto;
+    border: none;
+    outline: 0;
+}
+
 
 .card {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
@@ -39,7 +59,14 @@ nav a:hover {
 }
 
 
+.to-right{
+    float: right  !important;
+}
 
+
+.padding-large{
+    padding: 12px 24px;
+}
 
 
 
