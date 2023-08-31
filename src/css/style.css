@@ -14,7 +14,7 @@ body {
     font-size: 15px;
     line-height: 1.5;
     font-family:'Times New Roman', Times, serif;
-    background-color: #F1F6F9;
+    background-color: #b9dbee;
 }
 
 
@@ -33,8 +33,13 @@ header {
     
     height: 100px;
     width: 100px;
-padding: 0px;
 float: left !important; 
+}
+
+.logo2{
+height: 30px;
+width: 30px;
+padding: 5px;
 }
 nav {
     overflow: hidden;
@@ -164,7 +169,7 @@ section{
     font-size: 10px;
   }
 
-  .cardBox {
+  .cardBox{
     background-color: #a6acafb7;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -188,12 +193,12 @@ section{
   }
 
   .black-ground .cardBox{
-    background-color: white;
-    color: black;
+    background-color: #e6e6e6b7;
+    color: rgb(94, 4, 4);
   }
 
   .btn-card:hover {
-    background-color: inherit;
+    background-color:rgb(255, 255, 255);
     color: inherit;
   }
 
