@@ -13,8 +13,10 @@ color: black;
 body {
     font-size: 15px;
     line-height: 1.5;
-    font-family: "Lato", sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #F1F6F9;
 }
+
 
 header {
     top: 0;
@@ -87,7 +89,7 @@ nav a:hover {
 .content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 8000px;
+    max-width: 100%;
     margin-top: 46px
 }
 
@@ -163,14 +165,12 @@ section{
   }
 
   .cardBox {
-    background-color: #fff;
+    background-color: #a6acafb7;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
-    width: 300px;
-    height: 200px;
-    max-width:300px;
-    max-height: 200px;
+    width: auto;
+    height: auto;
     text-align: center;
     flex-shrink: 1;
   }
