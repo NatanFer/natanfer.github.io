@@ -22,7 +22,6 @@ header {
     top: 0;
     background-color: #212A3E;
     color: white;
-    /* height: 50px; */
     width: 100%;
     position: fixed;
     z-index: 1;
@@ -40,6 +39,12 @@ float: left !important;
 height: 30px;
 width: 30px;
 padding: 5px;
+
+}
+
+.logo2:hover{
+    height: 35px;
+    width: 35px; 
 }
 nav {
     overflow: hidden;
@@ -99,7 +104,7 @@ nav a:hover {
 }
 
 .container {
-    padding: 0.01em 16px;
+    padding: 0.01em 0px;
 }
 
 .padding-64 {

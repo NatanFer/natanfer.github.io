@@ -52,7 +52,6 @@ button{
     width: 100px;
     height: 60px;
     padding: 13px; 
-    color: mediumvioletred;
     background-color: beige;
     margin-top: 50px;
     transition: 0.5s;
@@ -63,7 +62,7 @@ button{
 }
 
 button:hover{
-    background-color: rgb(255, 173, 241);
+    background-color: inherit;
     height: 70px;
     width: 110;
     
