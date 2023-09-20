@@ -50,11 +50,7 @@ transition: 0.45s;
     height: 35px;
     width: 35px; 
 }
-.nav {
-    overflow: hidden;
-    width: 100%;
-    box-sizing: inherit;
-}
+
 
 .nava {
     color: inherit;
