@@ -2,6 +2,12 @@ body {
     background-color: gainsboro;
 }
 
+.img2{
+    float: left;
+    width: 450px;
+    border-radius: 3px;
+    
+}
 .content-group {
     margin-top: 50px;
     display: flex;
@@ -10,15 +16,17 @@ body {
 }
 
 .left-side-bar {
-    margin-top: 50px;
+    margin-top: 60px;
     background-color: white;
     width: 250px;
     height: 250px;
     left: 20px;
-    position: fixed;
+    position: absolute;
+    border-radius: 8px;
 }
 
 .left-side-bar button {
+   
     display: block;
     background-color: inherit;
     color: black;
@@ -30,6 +38,13 @@ body {
     cursor: pointer;
     transition: 0.3s;
     font-size: 17px;
+}
+
+.filmes {
+    margin-top: px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
 }
 
 .left-side-bar button:hover {
@@ -64,9 +79,8 @@ body {
     padding: 0px 12px;
     height: auto;
     width: 1000px;
-    left: 500px;
+    left: 239px;
     position:relative;
-
 }
 
 .card {
@@ -74,16 +88,14 @@ body {
         0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.txt{
-  
-    text-align: justify;
-    padding: auto;
-    margin: auto;
-    max-width:auto ;
-    float: left;
-}
 .edp{
-    font-size: 25px;
-    margin-left: 15%;
-    margin-right: 15%;
+    font-size: 15px;
+    margin-left: 5%;
+    margin-right: 9%;
+    text-align:justify;
+    padding-bottom: 35px;
+}
+
+h1{
+    padding-top: 3%;
 }
