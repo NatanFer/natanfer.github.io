@@ -299,20 +299,6 @@ font-size: 45px;
     padding: 25px;
 }
 
-.mec {
-    width: 500px;
-    height: 500px;
-    text-align:right; 
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 100px;
-    border-radius: 25px;
-}
-
-.txt2{
-    font-size: 35px;
-}
-
 .txt1{
     font-size: 25px;
     display: flex;
@@ -331,20 +317,12 @@ font-size: 45px;
    padding: 25px;
 }
 
-.p{
-    font-size: 35px;
-}
-
 .bodyart{
     background-color: hsl(196, 52%, 78%);  
     color: rgb(0, 0, 0);
     margin: 0px;
 }
 
-.h1art{
-    text-align:center ;
-    padding-top: 25px;
-}
 
 .espac{
 

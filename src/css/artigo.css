@@ -77,10 +77,12 @@ body {
     text-align: center;
     margin-left: 50px;
     padding: 0px 12px;
-    height: auto;
-    width: 1000px;
+    height: 850px;
+    width: 1304;
     left: 239px;
+    right: 100px;
     position:relative;
+    overflow-y:scroll ;
 }
 
 .card {
@@ -89,7 +91,7 @@ body {
 }
 
 .edp{
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 5%;
     margin-right: 9%;
     text-align:justify;
@@ -98,4 +100,61 @@ body {
 
 h1{
     padding-top: 3%;
+}
+
+.aling-art2{
+    margin: 10px;
+    padding: 10px;
+}
+
+.h1art{
+    text-align:center ;
+    padding-top: 10px;
+}
+
+.txt2{
+    font-size: 30px;
+}
+
+.p{
+    font-size: 25px;
+}
+
+.mec {
+    width: 600px;
+    height: 400px;
+    text-align:right; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    border-radius: 25px;
+    float: right;
+}
+
+.cardartigo3 {
+    color: black;
+    background-color: white; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 50px;
+    padding: 0px 12px;
+    height: 850px;
+    width: 700px;
+    left: 239px;
+    right: 100px;
+    position:relative;
+    overflow-y:scroll ;
+}
+
+.mecytb {
+    width: 500px;
+    height: 300px;
+    text-align:right; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    border-radius: 25px;
+    padding-top: 100px;
 }
