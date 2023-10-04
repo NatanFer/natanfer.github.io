@@ -41,7 +41,7 @@
     <p id="tempr"></p>
 
     numeros para fatorar<br>
-    <input type="text" id="fato">
+    <input type="number" id="fatt">
     <button onclick="fatorial()">Salvar</button>
     <p id="fatr"></p>
     <script>
@@ -71,8 +71,8 @@
 
 
         function comparacao() {
-            let numc1 = document.getElementById('num1').value
-            let numc2 = document.getElementById('num2').value
+            let numc1 = parseFloat(document.getElementById('num1').value)
+            let numc2 = parseFloat(document.getElementById('num2').value)
 
             if (numc1 < numc2) {
                 document.getElementById('comp').innerText = numc1 + " é menor que " + numc2;
@@ -89,7 +89,7 @@
 
         // 3
         function divisiveis() {
-            let numd1 = parseFloat( document.getElementById('num3').value)
+            let numd1 = parseFloat(document.getElementById('num3').value)
             let numd2 = parseFloat(document.getElementById('num4').value)
 
 
@@ -106,7 +106,7 @@
             let temp = document.getElementById('temp').value
 
             if (temp < 19) {
-                document.getElementById('tempr').innerText= "Ta frio pra caramba";
+                document.getElementById('tempr').innerText = "Ta frio pra caramba";
             }
             else if (temp > 29) {
                 document.getElementById('tempr').innerText = " Ta morando no nordeste ";
@@ -117,27 +117,28 @@
         }
 
 
-// 6
+        // 6
 
-function fatorial() {
-            let fat = document.getElementById('fato').value
-            let fatc= fat
-            let resul=fat
-            for (;fatc>0;fatc-1) {
-            for(let i=1;i<i;i++){
-                let resul1=fatc*resul
-                resul=resul1
-                fatc=fatc-1
+        function fatorial() {
+            let fat = parseFloat(document.getElementById('fatt').value)
+            let resul = fat
+            for (let i = 1; i < fat; i++) {
+                resul = resul * i
             }
-            let resul2=resul1*fatc
 
-           
-            document.getElementById('fatr').innerText = resul2;
-         }
+            document.getElementById('fatr').innerText = resul;
         }
-    
 
+        //7
+        function fatorial() {
+            let fat = parseFloat(document.getElementById('fatt').value)
+            let resul = fat
+            for (let i = 1; i < fat; i++) {
+                resul = resul * i
+            }
 
+            document.getElementById('fatr').innerText = resul;
+        }
 
 
 
