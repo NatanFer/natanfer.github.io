@@ -44,7 +44,23 @@
     <input type="number" id="fatt">
     <button onclick="fatorial()">Salvar</button>
     <p id="fatr"></p>
+
+    contagem regressiva <br>
+    <input type="number" id="ctg">
+    <button onclick="contagem()">Salvar</button>
+    <p id="ctgr"></p>
+
+
+    contagem regressiva <br>
+    <input type="number" id="tab">
+    <button onclick="tabuada()">Salvar</button>
+    <p id="tabr"></p>
+   
+
+
+
     <script>
+
 
         // 1
         function salvar() {
@@ -130,16 +146,25 @@
         }
 
         //7
-        function fatorial() {
-            let fat = parseFloat(document.getElementById('fatt').value)
-            let resul = fat
-            for (let i = 1; i < fat; i++) {
-                resul = resul * i
+        function contagem() {
+            let ctgn = parseFloat(document.getElementById('ctg').value)
+            let resul = ""
+            for (let i = 0; i < ctgn; i++) {
+                resul = ctgn - i
+                document.getElementById('ctgr').innerText += resul + "-";
             }
-
-            document.getElementById('fatr').innerText = resul;
         }
 
+        function tabuada() {
+            let tabn = parseFloat(document.getElementById('tab').value)
+           
+for(let i = 0;i<=10;i++){
+let result = tabn*i
+                document.getElementById('tabr').innerText +=  tabn+"x"+i+"="+ result+"\n" ;
+}
+            }
+
+        
 
 
 
