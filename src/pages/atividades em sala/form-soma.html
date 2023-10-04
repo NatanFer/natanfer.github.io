@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+
+<body>
+    Nome<br>
+    <input type="text" id="nome">
+    <button onclick="salvar()">Salvar</button>
+    <p id="result"></p>
+    <br>
+
+    Saiba se é um idoso ou Jovem<br>
+    <input type="text" id="idade">
+    <button onclick="idade()">Salvar</button>
+    <p id="idad"></p>
+    <br>
+
+    Insira dois numeros para comparar<br>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="comparacao()">comparar</button>
+    <p id="comp"></p>
+    <br>
+
+
+    Insira dois numeros que deseja saber se são divisiveis<br>
+    <input type="text" id="num3">
+    <input type="text" id="num4">
+    <button onclick="divisiveis()">Salvar</button><br>
+    <p id="divi"></p>
+
+
+    Temperatura<br>
+    <input type="text" id="temp">
+    <button onclick="temperatura()">Salvar</button>
+    <p id="tempr"></p>
+
+    numeros para fatorar<br>
+    <input type="text" id="fato">
+    <button onclick="fatorial()">Salvar</button>
+    <p id="fatr"></p>
+    <script>
+
+        // 1
+        function salvar() {
+            let nome = document.getElementById('nome').value;
+            document.getElementById('result').innerText = nome;
+        }
+
+        // 1
+        function idade() {
+            let idade = document.getElementById('idade').value
+
+            if (idade < 18) {
+                document.getElementById('idad').innerText = "Ele é menor de idade";
+            }
+            else if (idade > 65) {
+                document.getElementById('idad').innerText = "Ele é um idoso";
+            }
+            else {
+                document.getElementById('idad').innerText = "Ele é um Adulto";
+            }
+        }
+
+        // 2
+
+
+        function comparacao() {
+            let numc1 = document.getElementById('num1').value
+            let numc2 = document.getElementById('num2').value
+
+            if (numc1 < numc2) {
+                document.getElementById('comp').innerText = numc1 + " é menor que " + numc2;
+            }
+            else if (numc1 > numc2) {
+                document.getElementById('comp').innerText = numc1 + " é maior que " + numc2;
+            }
+            else {
+                document.getElementById('comp').innerText = numc1 + " é " + numc2 + " são iguais";
+            }
+        }
+
+
+
+        // 3
+        function divisiveis() {
+            let numd1 = parseFloat( document.getElementById('num3').value)
+            let numd2 = parseFloat(document.getElementById('num4').value)
+
+
+            if (numd1 % numd2 == 0) {
+                document.getElementById('divi').innerText = numd1 + " é divisivel por " + numd2;
+            }
+            else {
+                document.getElementById('divi').innerText = numd1 + " é não é divisivel por " + numd2;
+            }
+        }
+
+        // 4
+        function temperatura() {
+            let temp = document.getElementById('temp').value
+
+            if (temp < 19) {
+                document.getElementById('tempr').innerText= "Ta frio pra caramba";
+            }
+            else if (temp > 29) {
+                document.getElementById('tempr').innerText = " Ta morando no nordeste ";
+            }
+            else {
+                document.getElementById('tempr').innerText = "Clima ta agradavel";
+            }
+        }
+
+
+// 6
+
+function fatorial() {
+            let fat = document.getElementById('fato').value
+            let fatc= fat
+            let resul=fat
+            for (;fatc>0;fatc-1) {
+            for(let i=1;i<i;i++){
+                let resul1=fatc*resul
+                resul=resul1
+                fatc=fatc-1
+            }
+            let resul2=resul1*fatc
+
+           
+            document.getElementById('fatr').innerText = resul2;
+         }
+        }
+    
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
