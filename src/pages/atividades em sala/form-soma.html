@@ -55,7 +55,7 @@
     <input type="number" id="tab">
     <button onclick="tabuada()">Salvar</button>
     <p id="tabr"></p>
-   
+
 
 
 
@@ -157,15 +157,15 @@
 
         function tabuada() {
             let tabn = parseFloat(document.getElementById('tab').value)
-            
-for(let i = 0;i<=10;i++){
-let result = tabn*i
-                document.getElementById('tabr').innerText +=  tabn+"x"+i+"="+ result+"\n" ;
-}
-            }
 
-        
-            function notas() {
+            for (let i = 0; i <= 10; i++) {
+                let result = tabn * i
+                document.getElementById('tabr').innerText += tabn + "x" + i + "=" + result + "\n";
+            }
+        }
+
+
+        function notas() {
             let mat1 = parseFloat(document.getElementById('1bm').value)
             let mat2 = parseFloat(document.getElementById('2bm').value)
             let mat3 = parseFloat(document.getElementById('3bm').value)
@@ -175,13 +175,38 @@ let result = tabn*i
             let fsc1 = parseFloat(document.getElementById('1bf').value)
             let fsc2 = parseFloat(document.getElementById('2bf').value)
             let fsc3 = parseFloat(document.getElementById('3bf').value)
-            let resul = mat1+mat2+mat3
-             if(resul<60) {
-                document.getElementById('tabr').innerText = "A nota foi menor que 60 portanto aluno foi está em recuperação ne matematica";
-            }else if(resul<45){
-                document.getElementById('tabr').innerText = "A nota foi menor que 45 portanto aluno foi reprovado em matematica";
-            }else{
-                document.getElementById('tabr').innerText = "A nota foi maior que 60 portanto aluno foi aprovado em matematica";
+            let resulm = mat1 + mat2 + mat3
+            let resulp = prt1 + prt2 + prt3
+            let resulf = fsc1 + fsc2 + fsc3
+
+            for (let i = 0; i < 1; i++) {
+                if (resulp < 60) {
+                    document.getElementById('bimp').innerText = "A nota foi " + resulp + " que é menor que 60 portanto aluno foi está em recuperação ne Matematica";
+                }else if (resulm < 60) {
+                    document.getElementById('bim').innerText = "A nota foi " + resulm + " que é menor que 60 portanto aluno foi está em recuperação ne matematica";
+                } else if (resul < 45) {
+                    document.getElementById('bim').innerText = "A nota foi " + resulm + " menor que 45 portanto aluno foi reprovado em matematica";
+                } else {
+                    document.getElementById('bim').innerText = "A nota foi " + resulm + " maior que 60 portanto aluno foi aprovado em matematica";
+                }
+
+                
+                 if (resulp < 60) {
+                    document.getElementById('bimp').innerText = "A nota foi " + resulp + " que é menor que 60 portanto aluno foi está em recuperação ne Portugues";
+                } else if (resulp < 45) {
+                    document.getElementById('bimp').innerText = "A nota foi " + resulp + " menor que 45 portanto aluno foi reprovado em Portugues";
+                } else {
+                    document.getElementById('bimp').innerText = "A nota foi " + resulp + " maior que 60 portanto aluno foi aprovado em Portugues";
+                }
+
+                
+                if (resulf < 60) {
+                    document.getElementById('bimf').innerText = "A nota foi " + resulf + " que é menor que 60 portanto aluno foi está em recuperação ne Fisica";
+                } else if (resulf < 45) {
+                    document.getElementById('bimf').innerText = "A nota foi " + resulf + " menor que 45 portanto aluno foi reprovado em Fisica";
+                } else {
+                    document.getElementById('bimf').innerText = "A nota foi " + resulf + " maior que 60 portanto aluno foi aprovado em Fisica";
+                }
             }
         }
 
@@ -190,25 +215,26 @@ let result = tabn*i
 
 
     </script>
-Notas <br>
-Matematica <br>
-<input type="number" id="1bm">
-<input type="number" id="2bm">
-<input type="number" id="3bm">
+    Notas <br>
+    Matematica <br>
+    <input type="number" id="1bm">
+    <input type="number" id="2bm">
+    <input type="number" id="3bm">
+    <p id="bim"></p>
 
+    Portugues <br>
+    <input type="number" id="1bp">
+    <input type="number" id="2bp">
+    <input type="number" id="3bp">
+    <p id="bimp"></p>
 
-Portugues <br>
-<input type="number" id="1bp">
-<input type="number" id="2bp">
-<input type="number" id="3bp">
-
-
-Fisica <br>
-<input type="number" id="1bf">
-<input type="number" id="2bf">
-<input type="number" id="3bf">
-<button onclick="notas()">Salvar</button>
-<p id="bimr"></p>
+    Fisica <br>
+    <input type="number" id="1bf">
+    <input type="number" id="2bf">
+    <input type="number" id="3bf">
+    <button onclick="notas()">Salvar</button>
+    <p id="bimf"></p>
+    <p id="big"></p>
 
 
 
