@@ -157,7 +157,7 @@
 
         function tabuada() {
             let tabn = parseFloat(document.getElementById('tab').value)
-           
+            
 for(let i = 0;i<=10;i++){
 let result = tabn*i
                 document.getElementById('tabr').innerText +=  tabn+"x"+i+"="+ result+"\n" ;
@@ -165,15 +165,50 @@ let result = tabn*i
             }
 
         
-
+            function notas() {
+            let mat1 = parseFloat(document.getElementById('1bm').value)
+            let mat2 = parseFloat(document.getElementById('2bm').value)
+            let mat3 = parseFloat(document.getElementById('3bm').value)
+            let prt1 = parseFloat(document.getElementById('1bp').value)
+            let prt2 = parseFloat(document.getElementById('2bp').value)
+            let prt3 = parseFloat(document.getElementById('3bp').value)
+            let fsc1 = parseFloat(document.getElementById('1bf').value)
+            let fsc2 = parseFloat(document.getElementById('2bf').value)
+            let fsc3 = parseFloat(document.getElementById('3bf').value)
+            let resul = mat1+mat2+mat3
+             if(resul<60) {
+                document.getElementById('tabr').innerText = "A nota foi menor que 60 portanto aluno foi está em recuperação ne matematica";
+            }else if(resul<45){
+                document.getElementById('tabr').innerText = "A nota foi menor que 45 portanto aluno foi reprovado em matematica";
+            }else{
+                document.getElementById('tabr').innerText = "A nota foi maior que 60 portanto aluno foi aprovado em matematica";
+            }
+        }
 
 
 
 
 
     </script>
+Notas <br>
+Matematica <br>
+<input type="number" id="1bm">
+<input type="number" id="2bm">
+<input type="number" id="3bm">
 
 
+Portugues <br>
+<input type="number" id="1bp">
+<input type="number" id="2bp">
+<input type="number" id="3bp">
+
+
+Fisica <br>
+<input type="number" id="1bf">
+<input type="number" id="2bf">
+<input type="number" id="3bf">
+<button onclick="notas()">Salvar</button>
+<p id="bimr"></p>
 
 
 
