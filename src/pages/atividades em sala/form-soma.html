@@ -2,240 +2,286 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/form.css">
     <title>Soma</title>
 </head>
 
 <body>
-    Nome<br>
-    <input type="text" id="nome">
-    <button onclick="salvar()">Salvar</button>
-    <p id="result"></p>
-    <br>
 
-    Saiba se é um idoso ou Jovem<br>
-    <input type="text" id="idade">
-    <button onclick="idade()">Salvar</button>
-    <p id="idad"></p>
-    <br>
-
-    Insira dois numeros para comparar<br>
-    <input type="number" id="num1">
-    <input type="number" id="num2">
-    <button onclick="comparacao()">comparar</button>
-    <p id="comp"></p>
-    <br>
-
-
-    Insira dois numeros que deseja saber se são divisiveis<br>
-    <input type="text" id="num3">
-    <input type="text" id="num4">
-    <button onclick="divisiveis()">Salvar</button><br>
-    <p id="divi"></p>
-
-
-    Temperatura<br>
-    <input type="text" id="temp">
-    <button onclick="temperatura()">Salvar</button>
-    <p id="tempr"></p>
-
-    numeros para fatorar<br>
-    <input type="number" id="fatt">
-    <button onclick="fatorial()">Salvar</button>
-    <p id="fatr"></p>
-
-    contagem regressiva <br>
-    <input type="number" id="ctg">
-    <button onclick="contagem()">Salvar</button>
-    <p id="ctgr"></p>
-
-
-    contagem regressiva <br>
-    <input type="number" id="tab">
-    <button onclick="tabuada()">Salvar</button>
-    <p id="tabr"></p>
+    <div class="org">
+        <div class="sla">
+            <div class="txt">
+            Nome<br />
+            <input type="text" id="nome" />
+            <button onclick="salvar()">Salvar</button>
+            <p id="result"></p>
+        </div>
+        </div>
 
 
 
+        <div class="sla">
+            <div class="txt">
+                Saiba se é um idoso ou Jovem<br />
+                <input type="text" id="idade" />
+                <button onclick="idade()">Salvar</button>
+                <p id="idad"></p>
+            </div>
+        </div>
+
+
+
+        <div class="sla">
+            <div class="txt">
+            Insira dois numeros para comparar<br />
+            <input type="number" id="num1" />
+            <input type="number" id="num2" />
+            <button onclick="comparacao()">comparar</button>
+            <p id="comp"></p>
+        </div>
+        </div >
+
+
+        <div class="sla">
+            <div class="txt">
+            Insira dois numeros que deseja saber se são divisiveis<br />
+            <input type="text" id="num3" />
+            <input type="text" id="num4" />
+            <button onclick="divisiveis()">Salvar</button><br />
+            <p id="divi"></p>
+        </div>
+        </div>
+
+
+        <div class="sla">
+            <div class="txt">
+            Temperatura<br />
+            <input type="text" id="temp" />
+            <button onclick="temperatura()">Salvar</button>
+            <p id="tempr"></p>
+        </div>
+        </div>
+
+
+
+        <div class="sla">
+            <div class="txt">
+            numeros para fatorar<br />
+            <input type="number" id="fatt" />
+            <button onclick="fatorial()">Salvar</button>
+            <p id="fatr"></p>
+        </div>
+        </div>
+
+
+        <div class="sla">
+            <div class="txt">
+            contagem regressiva <br />
+            <input type="number" id="ctg" />
+            <button onclick="contagem()">Salvar</button>
+            <p id="ctgr"></p>
+        </div>
+        </div>
+
+
+
+        <div class="sla">
+            <div class="txt">
+            tabuada <br />
+            <input type="number" id="tab" />
+            <button onclick="tabuada()">Salvar</button>
+            <p id="tabr"></p>
+        </div>
+        </div>
+
+
+
+        <div class="sla">
+            <div class="txt">
+            Notas <br />
+            Matematica <br />
+            <input type="text" id="1bm" />
+            <input type="text" id="2bm" />
+            <input type="text" id="3bm" /><br>
+
+            Portugues <br />
+            <input type="text" id="1bp" />
+            <input type="text" id="2bp" />
+            <input type="text" id="3bp" /><br>
+
+            Fisica <br />
+            <input type="text" id="1bf" />
+            <input type="text" id="2bf" />
+            <input type="text" id="3bf" />
+            <button onclick="notas()">Salvar</button>
+
+            <p id="big"></p>
+        </div>
+        </div>
+    </div>
 
     <script>
-
-
         // 1
         function salvar() {
-            let nome = document.getElementById('nome').value;
-            document.getElementById('result').innerText = nome;
+            let nome = document.getElementById("nome").value;
+            document.getElementById("result").innerText = nome;
         }
 
         // 1
         function idade() {
-            let idade = document.getElementById('idade').value
+            let idade = document.getElementById("idade").value;
 
             if (idade < 18) {
-                document.getElementById('idad').innerText = "Ele é menor de idade";
-            }
-            else if (idade > 65) {
-                document.getElementById('idad').innerText = "Ele é um idoso";
-            }
-            else {
-                document.getElementById('idad').innerText = "Ele é um Adulto";
+                document.getElementById("idad").innerText = "Ele é menor de idade";
+            } else if (idade > 65) {
+                document.getElementById("idad").innerText = "Ele é um idoso";
+            } else {
+                document.getElementById("idad").innerText = "Ele é um Adulto";
             }
         }
 
         // 2
 
-
         function comparacao() {
-            let numc1 = parseFloat(document.getElementById('num1').value)
-            let numc2 = parseFloat(document.getElementById('num2').value)
+            let numc1 = parseFloat(document.getElementById("num1").value);
+            let numc2 = parseFloat(document.getElementById("num2").value);
 
             if (numc1 < numc2) {
-                document.getElementById('comp').innerText = numc1 + " é menor que " + numc2;
-            }
-            else if (numc1 > numc2) {
-                document.getElementById('comp').innerText = numc1 + " é maior que " + numc2;
-            }
-            else {
-                document.getElementById('comp').innerText = numc1 + " é " + numc2 + " são iguais";
+                document.getElementById("comp").innerText =
+                    numc1 + " é menor que " + numc2;
+            } else if (numc1 > numc2) {
+                document.getElementById("comp").innerText =
+                    numc1 + " é maior que " + numc2;
+            } else {
+                document.getElementById("comp").innerText =
+                    numc1 + " é " + numc2 + " são iguais";
             }
         }
 
-
-
         // 3
         function divisiveis() {
-            let numd1 = parseFloat(document.getElementById('num3').value)
-            let numd2 = parseFloat(document.getElementById('num4').value)
-
+            let numd1 = parseFloat(document.getElementById("num3").value);
+            let numd2 = parseFloat(document.getElementById("num4").value);
 
             if (numd1 % numd2 == 0) {
-                document.getElementById('divi').innerText = numd1 + " é divisivel por " + numd2;
-            }
-            else {
-                document.getElementById('divi').innerText = numd1 + " é não é divisivel por " + numd2;
+                document.getElementById("divi").innerText =
+                    numd1 + " é divisivel por " + numd2;
+            } else {
+                document.getElementById("divi").innerText =
+                    numd1 + " é não é divisivel por " + numd2;
             }
         }
 
         // 4
         function temperatura() {
-            let temp = document.getElementById('temp').value
+            let temp = document.getElementById("temp").value;
 
             if (temp < 19) {
-                document.getElementById('tempr').innerText = "Ta frio pra caramba";
-            }
-            else if (temp > 29) {
-                document.getElementById('tempr').innerText = " Ta morando no nordeste ";
-            }
-            else {
-                document.getElementById('tempr').innerText = "Clima ta agradavel";
+                document.getElementById("tempr").innerText = "Ta frio pra caramba";
+            } else if (temp > 29) {
+                document.getElementById("tempr").innerText =
+                    " Ta morando no nordeste ";
+            } else {
+                document.getElementById("tempr").innerText = "Clima ta agradavel";
             }
         }
-
 
         // 6
 
         function fatorial() {
-            let fat = parseFloat(document.getElementById('fatt').value)
-            let resul = fat
+            let fat = parseFloat(document.getElementById("fatt").value);
+            let resul = fat;
             for (let i = 1; i < fat; i++) {
-                resul = resul * i
+                resul = resul * i;
             }
 
-            document.getElementById('fatr').innerText = resul;
+            document.getElementById("fatr").innerText = resul;
         }
 
         //7
         function contagem() {
-            let ctgn = parseFloat(document.getElementById('ctg').value)
-            let resul = ""
+            let ctgn = parseFloat(document.getElementById("ctg").value);
+            let resul = "";
             for (let i = 0; i < ctgn; i++) {
-                resul = ctgn - i
-                document.getElementById('ctgr').innerText += resul + "-";
+                resul = ctgn - i;
+                document.getElementById("ctgr").innerText += resul + "-";
             }
         }
 
         function tabuada() {
-            let tabn = parseFloat(document.getElementById('tab').value)
+            let tabn = parseFloat(document.getElementById("tab").value);
 
             for (let i = 0; i <= 10; i++) {
-                let result = tabn * i
-                document.getElementById('tabr').innerText += tabn + "x" + i + "=" + result + "\n";
+                let result = tabn * i;
+                document.getElementById("tabr").innerText +=
+                    tabn + "x" + i + "=" + result + "\n";
             }
         }
-
 
         function notas() {
-            let mat1 = parseFloat(document.getElementById('1bm').value)
-            let mat2 = parseFloat(document.getElementById('2bm').value)
-            let mat3 = parseFloat(document.getElementById('3bm').value)
-            let prt1 = parseFloat(document.getElementById('1bp').value)
-            let prt2 = parseFloat(document.getElementById('2bp').value)
-            let prt3 = parseFloat(document.getElementById('3bp').value)
-            let fsc1 = parseFloat(document.getElementById('1bf').value)
-            let fsc2 = parseFloat(document.getElementById('2bf').value)
-            let fsc3 = parseFloat(document.getElementById('3bf').value)
-            let resulm = mat1 + mat2 + mat3
-            let resulp = prt1 + prt2 + prt3
-            let resulf = fsc1 + fsc2 + fsc3
+            let mat1 = document.getElementById("1bm").value;
+            let mat2 = document.getElementById("2bm").value;
+            let mat3 = document.getElementById("3bm").value;
+            let prt1 = document.getElementById("1bp").value;
+            let prt2 = document.getElementById("2bp").value;
+            let prt3 = document.getElementById("3bp").value;
+            let fsc1 = document.getElementById("1bf").value;
+            let fsc2 = document.getElementById("2bf").value;
+            let fsc3 = document.getElementById("3bf").value;
+            var soma;
+            var resultado = []
 
-            for (let i = 0; i < 1; i++) {
-             if (resulm < 60) {
-                    document.getElementById('bim').innerText = "A nota foi " + resulm + " que é menor que 60 portanto aluno foi está em recuperação ne matematica";
-                } else if (resul < 45) {
-                    document.getElementById('bim').innerText = "A nota foi " + resulm + " menor que 45 portanto aluno foi reprovado em matematica";
+            if (
+                fsc1 == "" ||
+                fsc2 == "" ||
+                fsc3 == "" ||
+                prt1 == "" ||
+                prt2 == "" ||
+                prt3 == "" ||
+                mat1 == "" ||
+                mat2 == "" ||
+                mat3 == ""
+            ) {
+                document.getElementById("big").innerText = ("Uma das notas não foi inserida");
+            } else {
+                soma = parseFloat(mat1) + parseFloat(mat2) + parseFloat(mat3)
+                if (soma < 60) {
+                    resultado.push(["Reprovado", soma])
                 } else {
-                    document.getElementById('bim').innerText = "A nota foi " + resulm + " maior que 60 portanto aluno foi aprovado em matematica";
+                    resultado.push(["Aprovado", soma])
                 }
 
-                
-                 if (resulp < 60) {
-                    document.getElementById('bimp').innerText = "A nota foi " + resulp + " que é menor que 60 portanto aluno foi está em recuperação ne Portugues";
-                } else if (resulp < 45) {
-                    document.getElementById('bimp').innerText = "A nota foi " + resulp + " menor que 45 portanto aluno foi reprovado em Portugues";
+                soma = parseFloat(prt1) + parseFloat(prt2) + parseFloat(prt3)
+
+                if (soma < 60) {
+                    resultado.push(["Reprovado", soma])
                 } else {
-                    document.getElementById('bimp').innerText = "A nota foi " + resulp + " maior que 60 portanto aluno foi aprovado em Portugues";
+                    resultado.push(["Aprovado", soma])
                 }
 
-                
-                if (resulf < 60) {
-                    document.getElementById('bimf').innerText = "A nota foi " + resulf + " que é menor que 60 portanto aluno foi está em recuperação ne Fisica";
-                } else if (resulf < 45) {
-                    document.getElementById('bimf').innerText = "A nota foi " + resulf + " menor que 45 portanto aluno foi reprovado em Fisica";
+                soma = parseFloat(fsc1) + parseFloat(fsc2) + parseFloat(fsc3)
+
+                if (soma < 60) {
+                    resultado.push(["Reprovado", soma])
                 } else {
-                    document.getElementById('bimf').innerText = "A nota foi " + resulf + " maior que 60 portanto aluno foi aprovado em Fisica";
+                    resultado.push(["Aprovado", soma])
                 }
+
+
+                document.getElementById("big").innerText = `
+            A nota foi ${resultado[0][1]} em matemática, portanto aluno foi ${resultado[0][0]}.\n
+            A nota foi ${resultado[1][1]} em português, portanto aluno foi ${resultado[1][0]}.\n
+            A nota foi ${resultado[2][1]} em física, portanto aluno foi ${resultado[2][0]}.\n
+            `
             }
+
+
+
+
         }
-
-
-
-
-
     </script>
-    Notas <br>
-    Matematica <br>
-    <input type="number" id="1bm">
-    <input type="number" id="2bm">
-    <input type="number" id="3bm">
-    <p id="bim"></p>
-
-    Portugues <br>
-    <input type="number" id="1bp">
-    <input type="number" id="2bp">
-    <input type="number" id="3bp">
-    <p id="bimp"></p>
-
-    Fisica <br>
-    <input type="number" id="1bf">
-    <input type="number" id="2bf">
-    <input type="number" id="3bf">
-    <button onclick="notas()">Salvar</button>
-    <p id="bimf"></p>
-    <p id="big"></p>
-
-
-
 
 </body>
 
