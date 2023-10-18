@@ -1,8 +1,4 @@
 /* reset */
-body{
-    padding: 0px;
-    margin: 0px;
-}
 .body {
     padding: 0;
     margin: 0;
@@ -19,8 +15,19 @@ body {
     line-height: 1.5;
     font-family:'Times New Roman', Times, serif;
     background-color: #b9dbee;
+    padding: 0px;
+    margin: 0px;
 }
 
+.bodybl {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family:'Times New Roman', Times, serif;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-content: center;
+}
 
 .header1 {
     top: 0;
