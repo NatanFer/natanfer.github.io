@@ -12,6 +12,8 @@
             user.curso = nomeCurso.value
             document.querySelector("#materiaAdd").style.display = "block"
             document.querySelector("#alunoInputs").style.display = "none"
+            document.querySelector("#card").style.display = "none"
+            
         
             }
             
@@ -25,7 +27,7 @@
                 user.instituicao = nomeInstituicao.value;
                 let resultados = `<b>BOLETIM DE: ${user.nome.toLocaleUpperCase()}</b><br><b>INSTITUIÇÃO/ESCOLA: ${user.instituicao.toLocaleUpperCase()} </b>`;
                 console.log(resultados)
-
+                document.querySelector("#resultNotas").style.display = "block"
                 materias.push(
                     {
                         id: id++,
@@ -33,14 +35,17 @@
                         notas: notas,
                         total: totalNotas,
                         info: `<hr>
-                            RESULTADO DE: <b>${nomeMateria.value.toLocaleUpperCase()}</b> 
-                            <ul class="list-group">
-                                <li class="list-group-item"><b>1º Bimestre:</b> ${notas[0]}</li>
-                                <li class="list-group-item"><b>2º Bimestre:</b> ${notas[1]}</li>
-                                <li class="list-group-item"><b>3º Bimestre:</b> ${notas[2]}</li>
-                                <li class="list-group-item"><b>4º Bimestre:</b> ${notas[3]}</li>
-                                <li class="list-group-item">TOTAL FINAL: <b>${totalNotas}</b></li>
-                                <li class="list-group-item">STATUS: <b>${isAprovadoOuReprovado(totalNotas)}</b></li>
+                        RESULTADO DE: <b>${nomeMateria.value.toLocaleUpperCase()}</b> 
+                        <table class="table table-striped list-group">
+                       
+                            
+                                <tr><th class="tr" >1º Bimestre:</th> <td> ${notas[0]}</td></tr>
+                                <tr><th class="tr" >2º Bimestre:</th> <td>${notas[1]}</td></tr>
+                                <tr><th class="tr" >3º Bimestre:</th> <td>${notas[2]}</td></tr>
+                                <tr><th class="tr" >4º Bimestre:</th> <td>${notas[3]}</td></tr>
+                                <tr><th>TOTAL FINAL: </th><td>${totalNotas}</td></tr>
+                                <tr>STATUS: <b>${isAprovadoOuReprovado(totalNotas)}</b></tr>
+                                </table>
                             </ul>
                             `
                     }
