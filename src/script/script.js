@@ -1,3 +1,4 @@
+footer()
 function openContent(event, nomeArtigo) {
     var i, article_content, linkToArticle;
     article_content = document.getElementsByClassName("article-content");
@@ -27,3 +28,12 @@ for (var x=index+1;x<urlp.length;x++){
 }
 
 document.getElementById(`${art}`).click();
+
+
+function footer(){
+footerElement.innerHTML=`
+  <footer class="container content center fixed-bottom mt-4;">
+                        <p class="center opacity wide">By Natan Emanuel Fernandes</p>
+    </footer>
+ `   
+}

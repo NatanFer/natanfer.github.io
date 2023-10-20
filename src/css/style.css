@@ -143,9 +143,6 @@ nav a:hover {
     
 }
 
-.container {
-    padding: 0.01em 0px;
-}
 
 .padding-64 {
     padding-top: 6px !important;
@@ -155,10 +152,6 @@ nav a:hover {
 .padding-642 {
     padding-top: 0px !important;
     padding-bottom: 0px !important
-}
-
-.wide {
-    letter-spacing: 4px;
 }
 
 h1,
@@ -176,9 +169,6 @@ h2 {
     font-size: 30px;
 }
 
-.opacity{
-    opacity: 0.60;
-}
 
 .justify{
     text-align: justify;
@@ -211,12 +201,6 @@ section{
   .black-ground{
     background-color: #212A3E;
     color: white;
-  }
-
-  footer{
-    margin-top: 0;
-    background-color: gainsboro;
-    font-size: 10px;
   }
 
   .cardBox{
