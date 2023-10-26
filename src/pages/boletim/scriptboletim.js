@@ -36,7 +36,7 @@
                         total: totalNotas,
                         info: `<hr>
                         RESULTADO DE: <b>${nomeMateria.value.toLocaleUpperCase()}</b> 
-                        <table class="table table-striped list-group">
+                        <table class="table table-striped list-group ">
                        
                             
                                 <tr><th class="tr" >1º Bimestre:</th> <td> ${notas[0]}</td></tr>
