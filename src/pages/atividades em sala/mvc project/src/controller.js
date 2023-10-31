@@ -1,10 +1,9 @@
-import { model } from "./model.js";
-import { construtorGrafico } from "./view.js";
+import { formNewUser } from "./view/form-new-user.js";
 
 const controller = {
   iniciar: () => {
-    construtorGrafico.render(model);
-  },
+    formNewUser.build();
+  }
 };
 
-export { controller };
+export {controller};
