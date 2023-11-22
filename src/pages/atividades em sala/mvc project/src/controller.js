@@ -6,6 +6,18 @@ const submitType = { NEW: 0, UPDATE: 1 };
 let submitState = submitType.NEW;
 let currentId = null;
 
+const loadData =async ()=>{
+  const temp = await dataService.carregarDados();
+
+data = temp.map(
+(usuario)=>
+new Usuario(usuario.nome, usuario.idade, usuario.login, usuario.senha)
+);
+
+viewController.update(data, new Usuario("", null, "", ""));
+};
+
+
 const handleSubmit = (event) => {
   event.preventDefault();
   const user = new Usuario(nome.value, idade.value, login.value, senha.value);
@@ -72,6 +84,9 @@ const controller = {
     //ADICIONADO ESCUTADOR PARA CLIQUE ESQUERDO DENTRO DA TABELA DE USUARIOS
     userList.addEventListener("click", clickEsquerdo);
     userList.addEventListener("contextmenu", clickDireito);
+    windows.onload = () =>{
+      loadData();
+    }
   },
 };
 
