@@ -1,10 +1,26 @@
-import { viewController } from "./view/viewController.js";
+import { view } from "./view/view.js";
 import { Usuario } from "./model/usuario.model.js";
+import { dataService } from "./api/data.service.js";
 
 let data = [];
 const submitType = { NEW: 0, UPDATE: 1 };
 let submitState = submitType.NEW;
 let currentId = null;
+
+const loadData =async ()=>{
+  const temp = await dataService.carregarDados();
+
+data = temp.map(
+(usuario)=>
+new Usuario(usuario.nome, usuario.idade, usuario.login, usuario.senha)
+);
+
+view.update(data, new Usuario("", null, "", ""));
+};
+
+const getFormsInputs =()=>{
+  return new Usuario
+}
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -16,12 +32,13 @@ const handleSubmit = (event) => {
     submitState = submitType.NEW;
     btnSub.innerText = "NEW";
   }
-  viewController.update(data, new Usuario("", null, "", ""));
+  view.update(data, new Usuario("", null, "", ""));
 };
 
 //ADICIONAR NOVO USUARIO
 const addUser = (newUser) => {
   data.push(newUser);
+  dataService.salvarDados(data)
 };
 //ATUALIZAR USUARIO SELECIONADO
 const updateUser = (index, userToUpdate) => {
@@ -30,7 +47,18 @@ const updateUser = (index, userToUpdate) => {
 //DELETAR USUÁRIO SELECIONADO
 const deletUser = (index) => {
   data.splice(index, 1);
+
 };
+
+const handleClick= (event) =>{
+  currentId = event.target.closest("tr").id.split("")[4];
+  if (event.button==2){
+    const confirmarDelecao =  window.confirm
+  }
+
+
+}
+
 //AÇÃO PARA BOTÃO ESQUERDO
 const clickEsquerdo = (event) => {
   currentId = event.target.closest("tr").id.split("")[4];
@@ -39,7 +67,7 @@ const clickEsquerdo = (event) => {
       .getNome()
       .toUpperCase()} será carregado para edição`
   );
-  viewController.updateForm(data[currentId])
+  view.updateForm(data[currentId])
   submitState = submitType.UPDATE;
   btnSub.innerText = "Update";
 
@@ -58,20 +86,23 @@ let confirm = window.confirm("certeza que vai deletar esse usuario")
 
 if (confirm){
   deletUser(currentId);
-  viewController.update(data, new Usuario("", null, "", ""));
+  view.update(data, new Usuario("", null, "", ""));
 }
 
   }
 };
 const controller = {
-  iniciar: () => {
-    viewController.build();
+  run: () => {
+    view.build();
     const form = document.getElementById("signForm");
     form.addEventListener("submit", handleSubmit);
     const userList = document.getElementById("users-result");
     //ADICIONADO ESCUTADOR PARA CLIQUE ESQUERDO DENTRO DA TABELA DE USUARIOS
     userList.addEventListener("click", clickEsquerdo);
     userList.addEventListener("contextmenu", clickDireito);
+    windows.onload = () =>{
+      loadData();
+    }
   },
 };
 
