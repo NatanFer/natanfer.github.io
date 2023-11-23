@@ -15,12 +15,7 @@ data = temp.map(
 new Usuario(usuario.nome, usuario.idade, usuario.login, usuario.senha)
 );
 
-view.update(data, new Usuario("", null, "", ""));
-};
 
-const getFormsInputs =()=>{
-  return new Usuario
-}
 
 const handleSubmit = (event) => {
   event.preventDefault();
